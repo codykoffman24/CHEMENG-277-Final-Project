@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from hmmlearn.hmm import GaussianHMM
+#Jessica's test text
 
 # =============================================================================
 # 1. Data Input and Preprocessing
