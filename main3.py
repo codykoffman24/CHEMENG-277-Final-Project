@@ -210,7 +210,7 @@ print(df_ridge_alphas.to_string(index=False))  # Print as formatted table
 print("\nLasso Regression Alpha Tuning Results:")
 print(df_lasso_alphas.to_string(index=False))  # Print as formatted table
 
-# Identify best alpha values
+
 # Identify the best alpha based on the highest R² Test score
 best_ridge_alpha = max(ridge_results, key=lambda alpha: ridge_results[alpha]["R² Test"])
 best_lasso_alpha = max(lasso_results, key=lambda alpha: lasso_results[alpha]["R² Test"])
