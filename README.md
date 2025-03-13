@@ -1,7 +1,7 @@
 # CHEMENG-277-Final-Project
 
 ## Overview
-This project analyzes battery State of Health (SOH) using the Oxford Battery Degradation Dataset. The analysis focuses on discharge trends and incorporates Open Circuit Voltage (OCV) hysteresis as a key feature to improve SOH predictions. Multiple regression models are evaluated, including Linear, Ridge, and Lasso Regression, to determine the most effective method for modeling battery degradation over time.
+This project analyzes battery State of Health (SOH) using the Oxford Battery Degradation Dataset. The analysis focuses on discharge trends and incorporates Open Circuit Voltage (OCV) hysteresis as a key feature to improve SOH predictions. Multivariable regression is applied and optimized with lasso and ridge regression to select the most important features impacting battery degradation. 
 ## Repository Structure
 ##
 
