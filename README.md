@@ -11,19 +11,15 @@ This project analyzes battery State of Health (SOH) using the Oxford Battery Deg
 │── Copy of Oxford_battery_data_charge.csv
 │── Copy of Oxford_battery_data_OCVdc.csv
 │── Copy of Oxford_battery_data_OCVch.csv
-│── main3.py
+│── Main_SOH_final.ipynb
 │── README.md
+│── Oxford Batteries Readme.txt
 │── requirements.txt
-│── .gitignore
+|── .gitignore
 │── .gitattributes
 │── ARCHIVE/
 │── .idea/
-│── avg_voltage_vs_cycle.png
-│── feature_importance.png
-│── feature_importance_table.png
-│── model_performance_table.png
-│── ocv_hysteresis_vs_cycle.png
-│── soh_vs_cycle.png
+
 
 ##
 - **CSV Files**: The dataset includes discharge, charge, and OCV data, stored in the root directory.
@@ -79,7 +75,7 @@ Battery SOH Estimation Using Data-Driven Modeling
 - Residual plots revealed non-random trends, indicating that battery degradation is not purely linear.
 - The model slightly underestimated SOH for test set batteries, likely due to slower degradation rates compared to the training set.
 - Future improvements may include higher-order polynomial models or additional predictors to refine SOH estimation.
-- 
+  
 ## Contributing
 For improvements or extensions, feel free to fork and submit a pull request.
 
