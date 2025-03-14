@@ -58,15 +58,28 @@ The project requires:
 - `pandas`
 - `matplotlib`
 - `scikit-learn`
+- `scipy.stats `
+- `seaborn `
+- `gc`
 
 ## Results & Key Findings
--Hysteresis voltage increases with cycle count, indicating rising internal resistance.
--SOH degrades over cycles, aligning with expected battery aging behavior.
--Ridge Regression (α=10) was selected as the best model, with an R² test score of 0.8988.
--Hyperparameter tuning confirmed the best α values for Ridge and Lasso models.
--Discharge dataset trends are prioritized, as they offer better insights into battery health.
+Battery SOH Estimation Using Data-Driven Modeling
 
+1. Feature Selection & Modeling Approach
+- A ridge regression model (α = 0.43) was selected after extensive hyperparameter tuning and cross-validation.
+- Key features included OCV hysteresis, cycle number, temperature (Tavg), and current metrics (Iavg, IVar, Ikurt).
+- OCV hysteresis had the strongest predictive power, confirming its importance in SOH estimation.
 
+2. Cross-Validation & Model Performance
+- Group k-fold (k = 4) and LOOCV ensured generalizability while avoiding data leakage.
+- A nested k-fold CV (outer k = 4, inner k = 3) optimized regularization parameters.
+- The final ridge regression model achieved high R^2 and low RMSE on both training and test sets.
+
+3. Residual Analysis & Model Limitations
+- Residual plots revealed non-random trends, indicating that battery degradation is not purely linear.
+- The model slightly underestimated SOH for test set batteries, likely due to slower degradation rates compared to the training set.
+- Future improvements may include higher-order polynomial models or additional predictors to refine SOH estimation.
+- 
 ## Contributing
 For improvements or extensions, feel free to fork and submit a pull request.
 
